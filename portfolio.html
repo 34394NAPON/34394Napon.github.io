@@ -2,34 +2,565 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<meta viewport="width=device-width, initial-scale=1.0">
-<title>แฟ้มสะสมงานของฉัน  </title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>แฟ้มสะสมผลงาน | นภนต์ จึงรุ่งฤทธิ์</title>
+
 <style>
-body { font-family: sans-serif; background-color: #f4f7f6; text-align: center;
-padding: 30px; }
-.container { max-width: 800px; margin: 0 auto; }
-.project-card { background: white; padding: 20px; margin: 20px 0; border-radius:
-8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: left; }
-.btn { display: inline-block; background: #2c3e50; color: white; padding: 10px
-20px; text-decoration: none; border-radius: 5px; margin-top: 20px; }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Tahoma", sans-serif;
+    min-height: 100vh;
+    padding: 25px;
+    color: #4b527e;
+    background: linear-gradient(135deg, #dce9ff, #eee4ff, #f7f3ff);
+}
+
+/* กล่องหลัก */
+.portfolio {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 28px;
+    box-shadow: 0 15px 35px rgba(86, 94, 160, 0.18);
+    overflow: hidden;
+}
+
+/* แต่ละหน้า */
+.page {
+    display: none;
+    min-height: 620px;
+    padding: 50px 45px;
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+}
+
+.page.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* หัวข้อ */
+h1 {
+    color: #3e4c91;
+    font-size: 32px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+h2 {
+    color: #6575c7;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+h3 {
+    color: #6575c7;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 17px;
+    line-height: 2;
+    margin-bottom: 15px;
+}
+
+.highlight {
+    color: #6575c7;
+    font-weight: bold;
+}
+
+/* คำนำ */
+.introduction {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 28px;
+    background: linear-gradient(135deg, #f1f5ff, #f8f1ff);
+    border-radius: 20px;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(100, 110, 180, 0.08);
+}
+
+.introduction p {
+    text-indent: 2em;
+    margin-bottom: 20px;
+}
+
+/* รูปผลงาน */
+.certificate-image {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    display: block;
+    margin: 0 auto 25px;
+    border-radius: 15px;
+    border: 5px solid #ffffff;
+    box-shadow: 0 8px 22px rgba(94, 105, 180, 0.2);
+}
+
+/* กล่องข้อมูล */
+.info-box {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 25px;
+    background: #f3f5ff;
+    border-radius: 20px;
+    text-align: left;
+    border-left: 5px solid #7184dc;
+}
+
+.info-box p {
+    margin-bottom: 10px;
+    line-height: 1.8;
+}
+
+/* กล่องมหาวิทยาลัย */
+.university-box {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #f1f5ff, #f8f1ff);
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(100, 110, 180, 0.08);
+}
+
+.university-box p {
+    margin-bottom: 12px;
+}
+
+/* กล่องผลงาน */
+.work-box {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 25px;
+    background: linear-gradient(135deg, #f1f5ff, #f8f1ff);
+    border-radius: 20px;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(100, 110, 180, 0.08);
+}
+
+.work-box p {
+    margin-bottom: 10px;
+}
+
+.work-box ul {
+    padding-left: 25px;
+    line-height: 2;
+    font-size: 16px;
+}
+
+.work-box li {
+    margin-bottom: 5px;
+}
+
+/* ปุ่มนำทาง */
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 22px;
+    background: #f7f8ff;
+    border-top: 1px solid #e5e8fa;
+}
+
+.nav-btn {
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #547bdc, #8668c9);
+    font-family: "Tahoma", sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 15px rgba(93, 108, 190, 0.25);
+}
+
+.nav-btn:disabled {
+    background: #c5c9df;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.page-number {
+    color: #7b82b0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* ปุ่มกลับหน้าหลัก */
+.home-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
+    color: #6575c7;
+    background: #edf0ff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.home-btn:hover {
+    background: #dfe5ff;
+    transform: translateY(-3px);
+}
+
+/* รองรับมือถือ */
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    .page {
+        min-height: 650px;
+        padding: 35px 20px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 15px;
+        line-height: 1.9;
+    }
+
+    .introduction,
+    .info-box,
+    .university-box,
+    .work-box {
+        padding: 20px;
+    }
+
+    .work-box ul {
+        font-size: 15px;
+    }
+
+    .nav-btn {
+        padding: 10px 17px;
+        font-size: 14px;
+    }
+}
 </style>
 </head>
+
 <body>
-<div class="container">
-<h1> แฟ้มสะสมงาน  (Portfolio)</h1>
-<p>นี่คือพื้นที่รวบรวมผลงานและกิจกรรมที่ภูมิใจครับ</p>
-<!-- กล่องผลงานชนที่  1 -->
-<div class="project-card">
-<h3>1. โครงงาน/ชิ้นงานวิทยาศาสตร์คำนวณ  </h3>
-<p>รายละเอียดชิ้นงาน : ได้รับความรู้ในการทำ Portfolio เพื่อนำไปยื่นในมหาลัย   </p>
+
+<div class="portfolio">
+
+    <!-- ========================= -->
+    <!-- หน้า 1 : คำนำ -->
+    <!-- ========================= -->
+    <section class="page active">
+
+        <h1>คำนำ</h1>
+
+        <div class="introduction">
+
+            <p>
+                แฟ้มสะสมผลงาน (Portfolio) ฉบับนี้จัดทำขึ้นเพื่อรวบรวมประวัติส่วนตัว
+                ประวัติการศึกษา ผลงาน โครงงาน และกิจกรรมที่ข้าพเจ้าได้เข้าร่วมตลอดช่วงที่ผ่านมา
+                โดยมีจุดมุ่งหมายเพื่อแสดงให้เห็นถึงความรู้ ความสามารถ ทักษะ และประสบการณ์ที่ได้สั่งสมมา
+                รวมถึงความสนใจและความตั้งใจในการศึกษาต่อระดับอุดมศึกษา
+            </p>
+
+            <p>
+                ข้าพเจ้ามีความสนใจในด้านเทคโนโลยีการเกษตรและมีความมุ่งมั่นที่จะพัฒนาตนเอง
+                ให้มีความรู้ความสามารถในสาขานี้ แฟ้มสะสมผลงานเล่มนี้จึงเป็นส่วนหนึ่ง
+                ในการนำเสนอความตั้งใจ ความรับผิดชอบ และความพยายามของข้าพเจ้า
+                ในการเตรียมความพร้อมสู่การศึกษาต่อและการประกอบอาชีพในอนาคต
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- หน้า 2 : แนะนำตัว -->
+    <!-- ========================= -->
+    <section class="page">
+
+        <h2>แนะนำตัว</h2>
+
+        <div class="info-box">
+
+            <p>
+                <strong>ชื่อ–นามสกุล:</strong>
+                นภนต์ จึงรุ่งฤทธิ์
+            </p>
+
+            <p>
+                <strong>ชื่อภาษาอังกฤษ:</strong>
+                NAPON Chuengrungrit
+            </p>
+
+            <p>
+                <strong>วันเดือนปีเกิด:</strong>
+                2 กรกฎาคม 2551
+            </p>
+
+            <p>
+                <strong>ชื่อเล่น:</strong>
+                อ๊อฟ
+            </p>
+
+            <p>
+                <strong>อายุ:</strong>
+                18 ปี
+            </p>
+
+            <p>
+                <strong>แผนการเรียน:</strong>
+                เตรียมวิศวกรรมศาสตร์
+            </p>
+
+            <p>
+                <strong>ความสนใจ:</strong>
+                เทคโนโลยี การเกษตร
+            </p>
+
+            <p>
+                <strong>เป้าหมาย:</strong>
+                ศึกษาต่อระดับมหาวิทยาลัย และพัฒนาตนเองด้านเทคโนโลยี การเกษตร
+            </p>
+
+            <p>
+                <strong>ช่องทางการติดต่อ</strong>
+            </p>
+
+            <p>
+                📞 เบอร์โทรศัพท์ : 0882707915
+            </p>
+
+            <p>
+                📧 Gmail : naponaop.11@gmail.com
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- หน้า 3 : มหาวิทยาลัย -->
+    <!-- ========================= -->
+    <section class="page">
+
+        <h2>มหาวิทยาลัยที่สนใจ</h2>
+
+        <div class="university-box">
+
+            <p>
+                <strong>มหาวิทยาลัยที่จะศึกษาต่อ:</strong>
+                มหาวิทยาลัยบูรพา
+            </p>
+
+            <p>
+                <strong>คณะที่สนใจ:</strong>
+                คณะเทคโนโลยีการเกษตร
+            </p>
+
+            <p>
+                <strong>หลักสูตร:</strong>
+                วิทยาศาสตรบัณฑิต (วท.บ.)
+            </p>
+
+            <p>
+                <strong>สาขา:</strong>
+                สาขาวิชาพัฒนาผลิตภัณฑ์อุตสาหกรรมเกษตร
+            </p>
+
+            <p>
+                <strong>เป้าหมายในชีวิต:</strong>
+                เจ้าของธุรกิจการเกษตร
+            </p>
+
+        </div>
+
+        <p style="margin-top: 25px;">
+            ข้าพเจ้ามีความตั้งใจที่จะศึกษาต่อด้านเทคโนโลยีการเกษตร
+            เพื่อนำความรู้ไปพัฒนาผลิตภัณฑ์และต่อยอดเป็นธุรกิจการเกษตรในอนาคต
+        </p>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- หน้า 4 : ผลงาน -->
+    <!-- ========================= -->
+    <section class="page">
+
+        <h2>ผลงานและเกียรติบัตร</h2>
+
+        <img
+            src="2EACAFD6-FEEB-4640-85EF-4351B5843D15.jpeg"
+            alt="เกียรติบัตรผลงานวิทยาศาสตร์และเทคโนโลยี"
+            class="certificate-image"
+        >
+
+        <div class="work-box">
+
+            <h3>
+                เป็นวิทยากรจัดแสดงผลงานนิทรรศการวิทยาศาสตร์และเทคโนโลยี
+            </h3>
+
+            <p>
+                <strong>รายละเอียดผลงาน:</strong>
+                เข้าร่วมเป็นวิทยากรจัดแสดงผลงานนิทรรศการวิทยาศาสตร์และเทคโนโลยี
+                เนื่องในงานวันวิทยาศาสตร์แห่งชาติ
+            </p>
+
+            <p>
+                <strong>ทักษะที่ได้รับ</strong>
+            </p>
+
+            <ul>
+                <li>ทักษะการสื่อสารและการนำเสนอผลงาน</li>
+                <li>ทักษะการทำงานร่วมกับผู้อื่น</li>
+                <li>ทักษะการถ่ายทอดความรู้ด้านวิทยาศาสตร์</li>
+                <li>ทักษะการคิดวิเคราะห์และแก้ไขปัญหา</li>
+                <li>ทักษะการวางแผนและการจัดเตรียมงาน</li>
+                <li>ทักษะความรับผิดชอบและการตรงต่อเวลา</li>
+                <li>ทักษะการใช้เทคโนโลยีในการนำเสนอ</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- หน้า 5 : ขอบคุณ -->
+    <!-- ========================= -->
+    <section class="page">
+
+        <h1>ขอบคุณที่เข้าชม</h1>
+
+        <p>
+            ขอบคุณทุกท่านที่เข้ามาเยี่ยมชม
+            แฟ้มสะสมผลงานของผม
+        </p>
+
+        <p>
+            ผมจะมุ่งมั่นพัฒนาความรู้ ความสามารถ
+            และทักษะของตนเองต่อไป
+        </p>
+
+        <p class="highlight">
+            Thank you for visiting my portfolio ✨
+        </p>
+
+        <a href="index.html" class="home-btn">
+            🏠 กลับหน้าหลัก
+        </a>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- ปุ่มเปลี่ยนหน้า -->
+    <!-- ========================= -->
+    <div class="navigation">
+
+        <button
+            class="nav-btn"
+            id="prevBtn"
+            onclick="changePage(-1)">
+            ◀ ย้อนกลับ
+        </button>
+
+        <span
+            class="page-number"
+            id="pageNumber">
+            หน้า 1 / 5
+        </span>
+
+        <button
+            class="nav-btn"
+            id="nextBtn"
+            onclick="changePage(1)">
+            หน้าถัดไป ▶
+        </button>
+
+    </div>
+
 </div>
-<!-- กล่องผลงานชิ้นที่ 2 -->
-<div class="project-card">
-<h3>2. กิจกรรม/เกียรติบัตรที่ได้รับ</h3>
-<p>รายละเอียดชิ้นงาน : เข้าร่วมการประกวด หรือกิจกรรมของโรงเรียน...</p>
-</div>
-<!-- ปุ่มกดกลับหน้าแรก -->
-<a href="index.html" class="btn"> กลับหน้าแรก</a>
-</div>
+
+
+<script>
+let currentPage = 0;
+
+const pages = document.querySelectorAll(".page");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+const pageNumber = document.getElementById("pageNumber");
+
+function showPage(pageIndex) {
+
+    pages.forEach((page, index) => {
+        page.classList.toggle("active", index === pageIndex);
+    });
+
+    prevBtn.disabled = pageIndex === 0;
+    nextBtn.disabled = pageIndex === pages.length - 1;
+
+    pageNumber.textContent =
+        "หน้า " + (pageIndex + 1) + " / " + pages.length;
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+function changePage(direction) {
+
+    currentPage += direction;
+
+    if (currentPage < 0) {
+        currentPage = 0;
+    }
+
+    if (currentPage >= pages.length) {
+        currentPage = pages.length - 1;
+    }
+
+    showPage(currentPage);
+}
+
+showPage(currentPage);
+</script>
+
 </body>
 </html>
