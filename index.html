@@ -1,32 +1,174 @@
-<!-- นี่คือโครงสร้างหน้าเว็บทังหมด ้ -->
 <!DOCTYPE html>
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>หน้าแนะนำตัวของฉัน</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>หน้าแนะนำตัว | นาย นภนต์ จึงรุ่งฤทธิ์</title>
+
 <style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-background-color: #2C608F; color: #1B71BF;
-text-align: center; padding: 50px;
-
+    font-family: "Tahoma", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    color: #4b527e;
+    background: linear-gradient(135deg, #dce9ff, #eee4ff, #f7f3ff);
 }
+
+/* กล่องหลัก */
 .card {
-background: white; border-radius: 0px;
-box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-max-width: 500px; margin: 0 auto; padding: 30px;
-
+    width: 100%;
+    max-width: 560px;
+    padding: 45px 30px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(86, 94, 160, 0.18);
 }
-h1 { color: #2c3e50; }
-p { font-size: 18px; line-height: 1.6; }
+
+/* รูปโปรไฟล์ อยู่ตรงกลาง */
+.profile-image {
+    width: 230px;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 28px;
+    border-radius: 20px;
+    border: 5px solid #ffffff;
+    box-shadow: 0 8px 22px rgba(94, 105, 180, 0.2);
+}
+
+/* หัวข้อ */
+h1 {
+    color: #3e4c91;
+    font-size: 28px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.name {
+    color: #6575c7;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+p {
+    font-size: 17px;
+    line-height: 1.9;
+    margin-bottom: 8px;
+}
+
+.highlight {
+    color: #6575c7;
+    font-weight: bold;
+}
+
+/* ปุ่ม */
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 30px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #547bdc, #8668c9);
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 8px 18px rgba(93, 108, 190, 0.25);
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(93, 108, 190, 0.35);
+}
+
+.footer {
+    margin-top: 28px;
+    color: #9a9fc4;
+    font-size: 13px;
+}
+
+/* รองรับมือถือ */
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
+    .card {
+        padding: 35px 20px;
+    }
+
+    .profile-image {
+        width: 200px;
+        height: 250px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .name {
+        font-size: 19px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+}
 </style>
 </head>
+
 <body>
+
 <div class="card">
-<h1>ยินดีต้อนรับสู่โปรไฟล์ของฉัน </h1>
-<p>สวัสดีครับ! ผมชื่อ <strong>นภนต์ จึงรุ่งฤทธิ์ (Napon Chuengrungrit)</strong></p>
-<p>ขณะนี้กำลังศึกษา engineering/สนใจด้าน fishing</p>
-<p>นี่คือเว็บไซต์แรกของผมที่โฮสต์บน GitHub Pages!</p>
-  <a href="portfolio.html" style="display:inline-block; background:#3498db; color:white; padding:10px 20px; text-decoration:none; border-radius:5px; margin-top:15px;">👉 ดูแฟ้มสะสมงานของผม</a>
+
+    <!-- รูปโปรไฟล์ตรงกลาง -->
+    <img
+        src="233FDED8-F43D-4F26-B2ED-A98AFD08F0B3.jpeg"
+        alt="รูปโปรไฟล์ นาย นภนต์ จึงรุ่งฤทธิ์"
+        class="profile-image"
+    >
+
+    <h1>
+        ยินดีต้อนรับสู่<br>
+        โปรไฟล์ของผม
+    </h1>
+
+    <p class="name">
+        นาย นภนต์ จึงรุ่งฤทธิ์
+    </p>
+
+    <p>
+        ศึกษาอยู่ชั้น
+        <span class="highlight">มัธยมศึกษาปีที่ 6</span>
+    </p>
+
+    <p>
+        แผนการเรียน
+        <span class="highlight">เตรียมวิศวกรรมศาสตร์</span>
+    </p>
+
+    <a href="portfolio.html" class="btn">
+        📁 ดูแฟ้มสะสมผลงาน
+    </a>
+
+    <div class="footer">
+        Welcome to my portfolio ✨
+    </div>
+
 </div>
+
 </body>
 </html>
