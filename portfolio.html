@@ -7,240 +7,570 @@
 <title>ผลงานและเกียรติบัตร | นาย นภนต์ จึงรุ่งฤทธิ์</title>
 
 <style>
+
+/* =========================
+   RESET
+========================= */
+
 * {
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
+
+/* =========================
+   BODY
+========================= */
 
 body {
-    font-family:"Tahoma",sans-serif;
-    min-height:100vh;
-    padding:25px;
-    color:#4b527e;
-    background:linear-gradient(135deg,#dce9ff,#eee4ff,#f7f3ff);
+    font-family: "Tahoma", sans-serif;
+    min-height: 100vh;
+    padding: 25px;
+    color: #4b527e;
+    background: linear-gradient(
+        135deg,
+        #dce9ff,
+        #eee4ff,
+        #f7f3ff
+    );
 }
+
+
+/* =========================
+   CONTAINER
+========================= */
 
 .container {
-    width:100%;
-    max-width:850px;
-    margin:0 auto;
-    background:rgba(255,255,255,0.95);
-    border-radius:28px;
-    box-shadow:0 15px 35px rgba(86,94,160,0.18);
-    overflow:hidden;
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 28px;
+    box-shadow: 0 15px 35px rgba(86, 94, 160, 0.18);
+    overflow: hidden;
 }
 
+
+/* =========================
+   NAVIGATION
+========================= */
+
 nav {
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-wrap:wrap;
-    gap:10px;
-    padding:18px;
-    background:linear-gradient(135deg,#547bdc,#8668c9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 18px;
+    background: linear-gradient(
+        135deg,
+        #547bdc,
+        #8668c9
+    );
 }
 
 nav a {
-    color:white;
-    text-decoration:none;
-    font-size:15px;
-    font-weight:bold;
-    padding:10px 17px;
-    border-radius:20px;
-    transition:0.3s;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px 17px;
+    border-radius: 20px;
+    transition: 0.3s;
 }
 
 nav a:hover {
-    background:rgba(255,255,255,0.2);
-    transform:translateY(-2px);
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
 }
+
+
+/* =========================
+   CONTENT
+========================= */
 
 .content {
-    min-height:620px;
-    padding:55px 45px;
-    text-align:center;
+    min-height: 620px;
+    padding: 55px 45px;
 }
+
+
+/* =========================
+   MAIN TITLE
+========================= */
 
 h1 {
-    color:#3e4c91;
-    font-size:32px;
-    margin-bottom:30px;
+    text-align: center;
+    color: #3e4c91;
+    font-size: 32px;
+    margin-bottom: 40px;
 }
+
+
+/* =========================
+   WORK SECTION
+========================= */
+
+.work-section {
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+
+/* =========================
+   WORK TITLE
+========================= */
+
+.work-title {
+    color: #3e4c91;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+
+/* =========================
+   CERTIFICATE IMAGE
+========================= */
 
 .certificate-image {
-    width:100%;
-    max-width:700px;
-    height:auto;
-    display:block;
-    margin:0 auto 30px;
-    border-radius:15px;
-    border:5px solid white;
-    box-shadow:0 8px 22px rgba(94,105,180,0.2);
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    display: block;
+    margin: 0 auto 25px;
+    border-radius: 15px;
+    border: 5px solid white;
+    box-shadow: 0 8px 22px rgba(94, 105, 180, 0.2);
 }
 
+
+/* =========================
+   PROJECT IMAGES
+========================= */
+
+.project-images {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.project-image {
+    width: calc(50% - 10px);
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 5px solid white;
+    box-shadow: 0 8px 22px rgba(94, 105, 180, 0.2);
+}
+
+
+/* =========================
+   WORK BOX
+========================= */
+
 .work-box {
-    max-width:700px;
-    margin:0 auto;
-    padding:30px;
-    background:linear-gradient(135deg,#f1f5ff,#f8f1ff);
-    border-radius:20px;
-    text-align:left;
-    box-shadow:0 5px 15px rgba(100,110,180,0.08);
+    width: 100%;
+    padding: 30px;
+    background: linear-gradient(
+        135deg,
+        #f1f5ff,
+        #f8f1ff
+    );
+    border-radius: 20px;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(100, 110, 180, 0.08);
+    border-left: 5px solid #7184dc;
 }
 
 .work-box h2 {
-    color:#6575c7;
-    font-size:21px;
-    line-height:1.6;
-    margin-bottom:15px;
+    color: #6575c7;
+    font-size: 21px;
+    line-height: 1.6;
+    margin-bottom: 18px;
 }
 
 .work-box p {
-    font-size:17px;
-    line-height:1.9;
-    margin-bottom:12px;
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 15px;
 }
 
 .work-box strong {
-    color:#6575c7;
+    color: #6575c7;
 }
 
 .work-box ul {
-    padding-left:25px;
-    line-height:2;
-    font-size:16px;
+    padding-left: 25px;
+    line-height: 2;
+    font-size: 16px;
 }
 
 .work-box li {
-    margin-bottom:5px;
+    margin-bottom: 5px;
 }
 
+
+/* =========================
+   SEPARATOR
+========================= */
+
+.separator {
+    width: 80%;
+    height: 2px;
+    margin: 40px auto;
+    background: #d9d9f2;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
 .button-area {
-    text-align:center;
-    margin-top:30px;
+    text-align: center;
+    margin-top: 30px;
 }
 
 .btn {
-    display:inline-block;
-    padding:12px 25px;
-    margin:5px;
-    color:white;
-    background:linear-gradient(135deg,#547bdc,#8668c9);
-    text-decoration:none;
-    border-radius:25px;
-    font-size:15px;
-    font-weight:bold;
-    transition:0.3s;
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 5px;
+    color: white;
+    background: linear-gradient(
+        135deg,
+        #547bdc,
+        #8668c9
+    );
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 .btn:hover {
-    transform:translateY(-3px);
+    transform: translateY(-3px);
 }
 
-@media(max-width:600px) {
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
     body {
-        padding:12px;
+        padding: 12px;
     }
 
     nav {
-        gap:6px;
-        padding:14px 8px;
+        gap: 6px;
+        padding: 14px 8px;
     }
 
     nav a {
-        font-size:13px;
-        padding:8px 12px;
+        font-size: 13px;
+        padding: 8px 12px;
     }
 
     .content {
-        padding:40px 20px;
+        padding: 40px 20px;
     }
 
     h1 {
-        font-size:27px;
+        font-size: 27px;
+        margin-bottom: 30px;
+    }
+
+    .work-title {
+        font-size: 21px;
     }
 
     .work-box {
-        padding:20px;
+        padding: 20px;
+    }
+
+    .work-box h2 {
+        font-size: 19px;
     }
 
     .work-box p {
-        font-size:15px;
-        line-height:1.8;
+        font-size: 15px;
+        line-height: 1.8;
     }
 
     .work-box ul {
-        font-size:15px;
+        font-size: 15px;
+        line-height: 1.8;
     }
+
+    .project-images {
+        gap: 10px;
+    }
+
+    .project-image {
+        width: calc(50% - 5px);
+        height: 210px;
+    }
+
 }
+
 </style>
 </head>
+
 
 <body>
 
 <div class="container">
 
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
 <nav>
-    <a href="index.html">หน้าหลัก</a>
-    <a href="introduction.html">คำนำ</a>
-    <a href="about.html">About Me</a>
-    <a href="university.html">มหาวิทยาลัย</a>
-    <a href="portfolio.html">ผลงาน</a>
-    <a href="skills.html">ทักษะ</a>
+
+    <a href="index.html">
+        หน้าหลัก
+    </a>
+
+    <a href="introduction.html">
+        คำนำ
+    </a>
+
+    <a href="about.html">
+        About Me
+    </a>
+
+    <a href="university.html">
+        มหาวิทยาลัย
+    </a>
+
+    <a href="portfolio.html">
+        ผลงาน
+    </a>
+
+    <a href="skills.html">
+        ทักษะ
+    </a>
+
 </nav>
+
+
+<!-- =========================
+     MAIN CONTENT
+========================= -->
 
 <main class="content">
 
-<h1>
-ผลงานและเกียรติบัตร
-</h1>
+    <h1>
+        ผลงานและเกียรติบัตร
+    </h1>
 
-<img
-    src="2EACAFD6-FEEB-4640-85EF-4351B5843D15.jpeg"
-    alt="เกียรติบัตรผลงานวิทยาศาสตร์และเทคโนโลยี"
-    class="certificate-image"
->
 
-<div class="work-box">
+    <!-- =================================================
+         ผลงานที่ 1
+    ================================================= -->
 
-<h2>
-เป็นวิทยากรจัดแสดงผลงานนิทรรศการวิทยาศาสตร์และเทคโนโลยี
-</h2>
+    <section class="work-section">
 
-<p>
-<strong>รายละเอียดผลงาน:</strong>
-เข้าร่วมเป็นวิทยากรจัดแสดงผลงานนิทรรศการวิทยาศาสตร์และเทคโนโลยี
-เนื่องในงานวันวิทยาศาสตร์แห่งชาติ
-</p>
+        <h2 class="work-title">
+            🏆 ผลงานที่ 1
+        </h2>
 
-<p>
-<strong>ทักษะที่ได้รับ</strong>
-</p>
 
-<ul>
-<li>ทักษะการสื่อสารและการนำเสนอผลงาน</li>
-<li>ทักษะการทำงานร่วมกับผู้อื่น</li>
-<li>ทักษะการถ่ายทอดความรู้ด้านวิทยาศาสตร์</li>
-<li>ทักษะการคิดวิเคราะห์และแก้ไขปัญหา</li>
-<li>ทักษะการวางแผนและการจัดเตรียมงาน</li>
-<li>ทักษะความรับผิดชอบและการตรงต่อเวลา</li>
-<li>ทักษะการใช้เทคโนโลยีในการนำเสนอ</li>
-</ul>
+        <img
+            src="2EACAFD6-FEEB-4640-85EF-4351B5843D15.jpeg"
+            alt="เกียรติบัตรผลงานวิทยาศาสตร์และเทคโนโลยี"
+            class="certificate-image"
+        >
 
-</div>
 
-<div class="button-area">
+        <div class="work-box">
 
-<a href="index.html" class="btn">
-🏠 กลับหน้าหลัก
-</a>
+            <h2>
+                เป็นวิทยากรจัดแสดงผลงานนิทรรศการวิทยาศาสตร์และเทคโนโลยี
+            </h2>
 
-<a href="skills.html" class="btn">
-ทักษะ →
-</a>
 
-</div>
+            <p>
+                <strong>รายละเอียดผลงาน:</strong>
+                เข้าร่วมเป็นวิทยากรจัดแสดงผลงานนิทรรศการ
+                วิทยาศาสตร์และเทคโนโลยี เนื่องในงานวันวิทยาศาสตร์แห่งชาติ
+                ได้มีโอกาสนำเสนอข้อมูลและแลกเปลี่ยนความรู้กับผู้เข้าชม
+            </p>
+
+
+            <p>
+                <strong>ทักษะที่ได้รับ:</strong>
+            </p>
+
+
+            <ul>
+
+                <li>
+                    ทักษะการสื่อสารและการนำเสนอผลงาน
+                </li>
+
+                <li>
+                    ทักษะการทำงานร่วมกับผู้อื่น
+                </li>
+
+                <li>
+                    ทักษะการถ่ายทอดความรู้ด้านวิทยาศาสตร์
+                </li>
+
+                <li>
+                    ทักษะการคิดวิเคราะห์และแก้ไขปัญหา
+                </li>
+
+                <li>
+                    ทักษะการวางแผนและการจัดเตรียมงาน
+                </li>
+
+                <li>
+                    ทักษะความรับผิดชอบและการตรงต่อเวลา
+                </li>
+
+                <li>
+                    ทักษะการใช้เทคโนโลยีในการนำเสนอ
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SEPARATOR
+    ========================= -->
+
+    <div class="separator"></div>
+
+
+    <!-- =================================================
+         ผลงานที่ 2
+    ================================================= -->
+
+    <section class="work-section">
+
+        <h2 class="work-title">
+            🧪 ผลงานที่ 2 : โครงงานที่ภาคภูมิใจ
+        </h2>
+
+
+        <!-- รูป 2 รูปอยู่ข้างกัน -->
+
+        <div class="project-images">
+
+            <img
+                src="IMG_6735.jpeg"
+                alt="ภาพโครงงานการศึกษาและเปรียบเทียบความพึงพอใจต่อยาสมุนไพร 2 สูตร"
+                class="project-image"
+            >
+
+            <img
+                src="IMG_6736.jpeg"
+                alt="ภาพประกอบโครงงาน"
+                class="project-image"
+            >
+
+        </div>
+
+
+        <div class="work-box">
+
+            <h2>
+                การศึกษาและเปรียบเทียบความพึงพอใจต่อยาสมุนไพร 2 สูตร
+            </h2>
+
+
+            <p>
+                <strong>รายละเอียดโครงงาน:</strong>
+                เป็นโครงงานที่ศึกษาและเปรียบเทียบความพึงพอใจ
+                ต่อผลิตภัณฑ์ยาสมุนไพร 2 สูตร โดยได้ฝึกการทดลอง
+                การเก็บข้อมูล และการวิเคราะห์ผลจากการศึกษา
+            </p>
+
+
+            <p>
+                <strong>ความภาคภูมิใจ:</strong>
+                โครงงานนี้ทำให้ได้ฝึกกระบวนการทำงานอย่างเป็นขั้นตอน
+                ทั้งการทดลอง การสังเกต การเก็บข้อมูล การวิเคราะห์ผล
+                และการทำงานร่วมกับผู้อื่น
+            </p>
+
+
+            <p>
+                <strong>ความเกี่ยวข้องกับสาขาที่ต้องการศึกษาต่อ:</strong>
+                โครงงานนี้สอดคล้องกับ
+                <strong>คณะเทคโนโลยีการเกษตร
+                สาขาวิชาพัฒนาผลิตภัณฑ์อุตสาหกรรมเกษตร</strong>
+                เพราะได้ฝึกกระบวนการศึกษาและพัฒนาผลิตภัณฑ์
+                รวมถึงการวิเคราะห์และเปรียบเทียบคุณสมบัติของผลิตภัณฑ์
+                ซึ่งสามารถนำไปต่อยอดกับการพัฒนาผลิตภัณฑ์ทางการเกษตรได้
+            </p>
+
+
+            <p>
+                <strong>ทักษะที่ได้รับ:</strong>
+            </p>
+
+
+            <ul>
+
+                <li>
+                    ทักษะการทดลองและการปฏิบัติจริง
+                </li>
+
+                <li>
+                    ทักษะการสังเกตและเก็บข้อมูล
+                </li>
+
+                <li>
+                    ทักษะการคิดวิเคราะห์
+                </li>
+
+                <li>
+                    ทักษะการพัฒนาผลิตภัณฑ์
+                </li>
+
+                <li>
+                    ทักษะการทำงานเป็นทีม
+                </li>
+
+                <li>
+                    ทักษะการนำเสนอผลงาน
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         BUTTONS
+    ========================= -->
+
+    <div class="button-area">
+
+        <a href="index.html" class="btn">
+            🏠 กลับหน้าหลัก
+        </a>
+
+        <a href="skills.html" class="btn">
+            ทักษะ →
+        </a>
+
+    </div>
+
 
 </main>
 
