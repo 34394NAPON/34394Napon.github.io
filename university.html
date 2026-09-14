@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>มหาวิทยาลัย | นาย นภนต์ จึงรุ่งฤทธิ์</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Tahoma", sans-serif;
+    min-height: 100vh;
+    padding: 25px;
+    color: #4b527e;
+    background: linear-gradient(135deg, #dce9ff, #eee4ff, #f7f3ff);
+}
+
+/* กล่องหลัก */
+.container {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 28px;
+    box-shadow: 0 15px 35px rgba(86, 94, 160, 0.18);
+    overflow: hidden;
+}
+
+/* เมนู */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 18px;
+    background: linear-gradient(135deg, #547bdc, #8668c9);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px 17px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
+}
+
+/* เนื้อหา */
+.content {
+    min-height: 620px;
+    padding: 55px 45px;
+    text-align: center;
+}
+
+h1 {
+    color: #3e4c91;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #6575c7;
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+/* รูปมหาวิทยาลัย */
+.university-image {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    display: block;
+    margin: 0 auto 30px;
+    border-radius: 20px;
+    border: 5px solid #ffffff;
+    box-shadow: 0 8px 22px rgba(94, 105, 180, 0.2);
+}
+
+/* กล่องข้อมูล */
+.university-box {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #f1f5ff, #f8f1ff);
+    border-radius: 20px;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(100, 110, 180, 0.08);
+}
+
+.university-box p {
+    font-size: 17px;
+    line-height: 1.9;
+    margin-bottom: 12px;
+}
+
+.university-box strong {
+    color: #6575c7;
+}
+
+/* ข้อความเพิ่มเติม */
+.description {
+    max-width: 650px;
+    margin: 25px auto 0;
+    font-size: 17px;
+    line-height: 2;
+}
+
+/* ปุ่ม */
+.button-area {
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 5px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #547bdc, #8668c9);
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 15px rgba(93, 108, 190, 0.25);
+}
+
+/* มือถือ */
+@media (max-width: 600px) {
+
+    body {
+        padding: 12px;
+    }
+
+    nav {
+        gap: 6px;
+        padding: 14px 8px;
+    }
+
+    nav a {
+        font-size: 13px;
+        padding: 8px 12px;
+    }
+
+    .content {
+        padding: 40px 20px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .university-box {
+        padding: 20px;
+    }
+
+    .university-box p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .description {
+        font-size: 15px;
+        line-height: 1.9;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ========================= -->
+    <!-- เมนู -->
+    <!-- ========================= -->
+
+    <nav>
+
+        <a href="index.html">
+            หน้าหลัก
+        </a>
+
+        <a href="introduction.html">
+            คำนำ
+        </a>
+
+        <a href="about.html">
+            About Me
+        </a>
+
+        <a href="university.html">
+            มหาวิทยาลัย
+        </a>
+
+        <a href="portfolio.html">
+            ผลงาน
+        </a>
+
+        <a href="skills.html">
+            ทักษะ
+        </a>
+
+        <a href="contact.html">
+            ติดต่อ
+        </a>
+
+    </nav>
+
+
+    <!-- ========================= -->
+    <!-- มหาวิทยาลัย -->
+    <!-- ========================= -->
+
+    <main class="content">
+
+        <h1>
+            มหาวิทยาลัยที่สนใจ
+        </h1>
+
+        <img
+            src="IMG_6592.png"
+            alt="รูปปกมหาวิทยาลัยบูรพา"
+            class="university-image"
+        >
+
+        <div class="university-box">
+
+            <p>
+                <strong>มหาวิทยาลัยที่จะศึกษาต่อ:</strong>
+                มหาวิทยาลัยบูรพา
+            </p>
+
+            <p>
+                <strong>คณะที่สนใจ:</strong>
+                คณะเทคโนโลยีการเกษตร
+            </p>
+
+            <p>
+                <strong>หลักสูตร:</strong>
+                วิทยาศาสตรบัณฑิต (วท.บ.)
+            </p>
+
+            <p>
+                <strong>สาขา:</strong>
+                สาขาวิชาพัฒนาผลิตภัณฑ์อุตสาหกรรมเกษตร
+            </p>
+
+            <p>
+                <strong>เป้าหมายในชีวิต:</strong>
+                เจ้าของธุรกิจการเกษตร
+            </p>
+
+        </div>
+
+        <p class="description">
+            ข้าพเจ้ามีความตั้งใจที่จะศึกษาต่อด้านเทคโนโลยีการเกษตร
+            เพื่อนำความรู้ไปพัฒนาผลิตภัณฑ์และต่อยอดเป็นธุรกิจการเกษตรในอนาคต
+        </p>
+
+
+        <!-- ========================= -->
+        <!-- ปุ่ม -->
+        <!-- ========================= -->
+
+        <div class="button-area">
+
+            <a href="index.html" class="btn">
+                🏠 กลับหน้าหลัก
+            </a>
+
+            <a href="about.html" class="btn">
+                ← About Me
+            </a>
+
+            <a href="portfolio.html" class="btn">
+                ผลงาน →
+            </a>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>
