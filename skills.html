@@ -7,241 +7,499 @@
 <title>ทักษะและความสามารถ | นาย นภนต์ จึงรุ่งฤทธิ์</title>
 
 <style>
+
+/* =========================
+   RESET
+========================= */
+
 * {
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
+
+/* =========================
+   BODY
+========================= */
 
 body {
-    font-family:"Tahoma",sans-serif;
-    min-height:100vh;
-    padding:25px;
-    color:#4b527e;
-    background:linear-gradient(135deg,#dce9ff,#eee4ff,#f7f3ff);
+    font-family: "Tahoma", sans-serif;
+    min-height: 100vh;
+    padding: 25px;
+    color: #4b527e;
+    background: linear-gradient(
+        135deg,
+        #dce9ff,
+        #eee4ff,
+        #f7f3ff
+    );
 }
+
+
+/* =========================
+   CONTAINER
+========================= */
 
 .container {
-    width:100%;
-    max-width:850px;
-    margin:0 auto;
-    background:rgba(255,255,255,0.95);
-    border-radius:28px;
-    box-shadow:0 15px 35px rgba(86,94,160,0.18);
-    overflow:hidden;
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 28px;
+    box-shadow: 0 15px 35px rgba(86, 94, 160, 0.18);
+    overflow: hidden;
 }
 
+
+/* =========================
+   NAVIGATION
+========================= */
+
 nav {
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-wrap:wrap;
-    gap:10px;
-    padding:18px;
-    background:linear-gradient(135deg,#547bdc,#8668c9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 18px;
+    background: linear-gradient(
+        135deg,
+        #547bdc,
+        #8668c9
+    );
 }
 
 nav a {
-    color:white;
-    text-decoration:none;
-    font-size:15px;
-    font-weight:bold;
-    padding:10px 17px;
-    border-radius:20px;
-    transition:0.3s;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px 17px;
+    border-radius: 20px;
+    transition: 0.3s;
 }
 
 nav a:hover {
-    background:rgba(255,255,255,0.2);
-    transform:translateY(-2px);
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
 }
+
+
+/* =========================
+   CONTENT
+========================= */
 
 .content {
-    min-height:620px;
-    padding:55px 45px;
+    min-height: 620px;
+    padding: 55px 45px;
 }
+
+
+/* =========================
+   TITLE
+========================= */
 
 h1 {
-    text-align:center;
-    color:#3e4c91;
-    font-size:32px;
-    margin-bottom:35px;
+    text-align: center;
+    color: #3e4c91;
+    font-size: 32px;
+    margin-bottom: 35px;
 }
 
+
+/* =========================
+   SKILL BOX
+========================= */
+
 .skill-box {
-    max-width:700px;
-    margin:0 auto 20px;
-    padding:25px 30px;
-    background:linear-gradient(135deg,#f1f5ff,#f8f1ff);
-    border-radius:20px;
-    box-shadow:0 5px 15px rgba(100,110,180,0.08);
-    border-left:5px solid #7184dc;
+    max-width: 700px;
+    margin: 0 auto 20px;
+    padding: 25px 30px;
+    background: linear-gradient(
+        135deg,
+        #f1f5ff,
+        #f8f1ff
+    );
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(100, 110, 180, 0.08);
+    border-left: 5px solid #7184dc;
 }
 
 .skill-box h2 {
-    color:#6575c7;
-    font-size:21px;
-    margin-bottom:12px;
+    color: #6575c7;
+    font-size: 21px;
+    margin-bottom: 15px;
 }
 
+
+/* =========================
+   SKILL IMAGE
+========================= */
+
+.skill-image {
+    display: block;
+    width: 100%;
+    max-width: 520px;
+    height: 330px;
+    object-fit: cover;
+    margin: 0 auto 20px;
+    border-radius: 18px;
+    box-shadow: 0 5px 15px rgba(80, 90, 160, 0.15);
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.skill-box p {
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+
+/* =========================
+   LIST
+========================= */
+
 .skill-box ul {
-    padding-left:25px;
-    font-size:16px;
-    line-height:2;
+    padding-left: 25px;
+    font-size: 16px;
+    line-height: 2;
 }
 
 .skill-box li {
-    margin-bottom:5px;
+    margin-bottom: 5px;
 }
 
+
+/* =========================
+   BUTTON
+========================= */
+
 .button-area {
-    text-align:center;
-    margin-top:30px;
+    text-align: center;
+    margin-top: 30px;
 }
 
 .btn {
-    display:inline-block;
-    padding:12px 25px;
-    margin:5px;
-    color:white;
-    background:linear-gradient(135deg,#547bdc,#8668c9);
-    text-decoration:none;
-    border-radius:25px;
-    font-size:15px;
-    font-weight:bold;
-    transition:0.3s;
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 5px;
+    color: white;
+    background: linear-gradient(
+        135deg,
+        #547bdc,
+        #8668c9
+    );
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 .btn:hover {
-    transform:translateY(-3px);
+    transform: translateY(-3px);
 }
 
-@media(max-width:600px) {
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
     body {
-        padding:12px;
+        padding: 12px;
     }
 
     nav {
-        gap:6px;
-        padding:14px 8px;
+        gap: 6px;
+        padding: 14px 8px;
     }
 
     nav a {
-        font-size:13px;
-        padding:8px 12px;
+        font-size: 13px;
+        padding: 8px 12px;
     }
 
     .content {
-        padding:40px 20px;
+        padding: 40px 20px;
     }
 
     h1 {
-        font-size:27px;
+        font-size: 27px;
     }
 
     .skill-box {
-        padding:20px;
+        padding: 20px;
     }
 
     .skill-box h2 {
-        font-size:19px;
+        font-size: 19px;
+    }
+
+    .skill-box p {
+        font-size: 15px;
+        line-height: 1.8;
     }
 
     .skill-box ul {
-        font-size:15px;
-        line-height:1.8;
+        font-size: 15px;
+        line-height: 1.8;
     }
+
+    .skill-image {
+        height: 250px;
+    }
+
 }
+
 </style>
 </head>
+
 
 <body>
 
 <div class="container">
 
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
 <nav>
-    <a href="index.html">หน้าหลัก</a>
-    <a href="introduction.html">คำนำ</a>
-    <a href="about.html">About Me</a>
-    <a href="university.html">มหาวิทยาลัย</a>
-    <a href="portfolio.html">ผลงาน</a>
-    <a href="skills.html">ทักษะ</a>
+
+    <a href="index.html">
+        หน้าหลัก
+    </a>
+
+    <a href="introduction.html">
+        คำนำ
+    </a>
+
+    <a href="about.html">
+        About Me
+    </a>
+
+    <a href="university.html">
+        มหาวิทยาลัย
+    </a>
+
+    <a href="portfolio.html">
+        ผลงาน
+    </a>
+
+    <a href="skills.html">
+        ทักษะ
+    </a>
+
 </nav>
+
+
+<!-- =========================
+     MAIN CONTENT
+========================= -->
 
 <main class="content">
 
+
 <h1>
-ทักษะและความสามารถ
+    ทักษะและความสามารถ
 </h1>
 
-<div class="skill-box">
 
-<h2>
-💻 ด้านเทคโนโลยี
-</h2>
-
-<ul>
-<li>การใช้คอมพิวเตอร์</li>
-<li>การใช้เทคโนโลยีเพื่อการเรียนรู้</li>
-<li>การนำเสนอข้อมูลด้วยเทคโนโลยี</li>
-</ul>
-
-</div>
+<!-- =========================
+     SKILL 1
+========================= -->
 
 <div class="skill-box">
 
-<h2>
-🔬 ด้านวิทยาศาสตร์
-</h2>
+    <h2>
+        🛠️ ทักษะการลงมือทำ
+    </h2>
 
-<ul>
-<li>การคิดวิเคราะห์</li>
-<li>การแก้ไขปัญหา</li>
-<li>การเรียนรู้และประยุกต์ใช้ความรู้ทางวิทยาศาสตร์</li>
-</ul>
+    <img
+        src="IMG_6715.jpeg"
+        alt="ภาพการลงมือปฏิบัติงาน"
+        class="skill-image"
+    >
+
+    <p>
+        มีทักษะในการลงมือปฏิบัติงานจริง สามารถเรียนรู้วิธีการใช้งาน
+        อุปกรณ์และเครื่องมือต่าง ๆ จากการฝึกปฏิบัติด้วยตนเอง
+        มีความตั้งใจและความรับผิดชอบในการทำงาน รู้จักสังเกต
+        ขั้นตอนการทำงาน และสามารถนำความรู้ที่ได้จากการเรียนรู้
+        มาประยุกต์ใช้กับสถานการณ์จริงได้
+    </p>
+
+    <ul>
+
+        <li>
+            เรียนรู้และลงมือปฏิบัติงานจริง
+        </li>
+
+        <li>
+            สามารถใช้งานอุปกรณ์และเครื่องมือเบื้องต้น
+        </li>
+
+        <li>
+            มีความตั้งใจและรับผิดชอบต่อหน้าที่
+        </li>
+
+        <li>
+            สามารถแก้ไขปัญหาเฉพาะหน้าในการทำงาน
+        </li>
+
+        <li>
+            สามารถนำความรู้มาประยุกต์ใช้ในการปฏิบัติงาน
+        </li>
+
+    </ul>
 
 </div>
+
+
+<!-- =========================
+     SKILL 2
+========================= -->
 
 <div class="skill-box">
 
-<h2>
-🗣️ ด้านการสื่อสาร
-</h2>
+    <h2>
+        💻 ด้านเทคโนโลยี
+    </h2>
 
-<ul>
-<li>การสื่อสารกับผู้อื่น</li>
-<li>การนำเสนอผลงาน</li>
-<li>การถ่ายทอดความรู้</li>
-</ul>
+    <ul>
+
+        <li>
+            การใช้คอมพิวเตอร์
+        </li>
+
+        <li>
+            การใช้เทคโนโลยีเพื่อการเรียนรู้
+        </li>
+
+        <li>
+            การนำเสนอข้อมูลด้วยเทคโนโลยี
+        </li>
+
+    </ul>
 
 </div>
+
+
+<!-- =========================
+     SKILL 3
+========================= -->
 
 <div class="skill-box">
 
-<h2>
-🤝 ด้านการทำงาน
-</h2>
+    <h2>
+        🔬 ด้านวิทยาศาสตร์
+    </h2>
 
-<ul>
-<li>การทำงานร่วมกับผู้อื่น</li>
-<li>ความรับผิดชอบ</li>
-<li>การวางแผนการทำงาน</li>
-<li>การตรงต่อเวลา</li>
-</ul>
+    <ul>
+
+        <li>
+            การคิดวิเคราะห์
+        </li>
+
+        <li>
+            การแก้ไขปัญหา
+        </li>
+
+        <li>
+            การเรียนรู้และประยุกต์ใช้ความรู้ทางวิทยาศาสตร์
+        </li>
+
+    </ul>
 
 </div>
+
+
+<!-- =========================
+     SKILL 4
+========================= -->
+
+<div class="skill-box">
+
+    <h2>
+        🗣️ ด้านการสื่อสาร
+    </h2>
+
+    <ul>
+
+        <li>
+            การสื่อสารกับผู้อื่น
+        </li>
+
+        <li>
+            การนำเสนอผลงาน
+        </li>
+
+        <li>
+            การถ่ายทอดความรู้
+        </li>
+
+    </ul>
+
+</div>
+
+
+<!-- =========================
+     SKILL 5
+========================= -->
+
+<div class="skill-box">
+
+    <h2>
+        🤝 ด้านการทำงาน
+    </h2>
+
+    <ul>
+
+        <li>
+            การทำงานร่วมกับผู้อื่น
+        </li>
+
+        <li>
+            ความรับผิดชอบ
+        </li>
+
+        <li>
+            การวางแผนการทำงาน
+        </li>
+
+        <li>
+            การตรงต่อเวลา
+        </li>
+
+    </ul>
+
+</div>
+
+
+<!-- =========================
+     BUTTONS
+========================= -->
 
 <div class="button-area">
 
-<a href="index.html" class="btn">
-🏠 กลับหน้าหลัก
-</a>
+    <a href="index.html" class="btn">
+        🏠 กลับหน้าหลัก
+    </a>
 
-<a href="portfolio.html" class="btn">
-← ผลงาน
-</a>
+    <a href="portfolio.html" class="btn">
+        ← ผลงาน
+    </a>
 
 </div>
+
 
 </main>
 
