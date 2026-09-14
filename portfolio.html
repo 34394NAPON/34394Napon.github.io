@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>แฟ้มสะสมผลงาน | นภนต์ จึงรุ่งฤทธิ์</title>
+<title>ผลงานและเกียรติบัตร | นาย นภนต์ จึงรุ่งฤทธิ์</title>
 
 <style>
 * {
@@ -22,7 +22,7 @@ body {
 }
 
 /* กล่องหลัก */
-.portfolio {
+.container {
     width: 100%;
     max-width: 850px;
     margin: 0 auto;
@@ -32,76 +32,57 @@ body {
     overflow: hidden;
 }
 
-/* แต่ละหน้า */
-.page {
-    display: none;
+/* เมนู */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 18px;
+    background: linear-gradient(135deg, #547bdc, #8668c9);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px 17px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
+}
+
+/* เนื้อหา */
+.content {
     min-height: 620px;
-    padding: 50px 45px;
+    padding: 55px 45px;
     text-align: center;
-    animation: fadeIn 0.5s ease;
 }
 
-.page.active {
-    display: block;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateX(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* หัวข้อ */
 h1 {
     color: #3e4c91;
     font-size: 32px;
-    line-height: 1.6;
-    margin-bottom: 25px;
+    line-height: 1.5;
+    margin-bottom: 30px;
 }
 
 h2 {
     color: #6575c7;
-    font-size: 28px;
-    margin-bottom: 25px;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
 h3 {
     color: #6575c7;
     font-size: 21px;
+    line-height: 1.6;
     margin-bottom: 15px;
-}
-
-p {
-    font-size: 17px;
-    line-height: 2;
-    margin-bottom: 15px;
-}
-
-.highlight {
-    color: #6575c7;
-    font-weight: bold;
-}
-
-/* คำนำ */
-.introduction {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 28px;
-    background: linear-gradient(135deg, #f1f5ff, #f8f1ff);
-    border-radius: 20px;
-    text-align: left;
-    box-shadow: 0 5px 15px rgba(100, 110, 180, 0.08);
-}
-
-.introduction p {
-    text-indent: 2em;
-    margin-bottom: 20px;
 }
 
 /* รูปผลงาน */
@@ -110,59 +91,17 @@ p {
     max-width: 700px;
     height: auto;
     display: block;
-    margin: 0 auto 25px;
+    margin: 0 auto 30px;
     border-radius: 15px;
     border: 5px solid #ffffff;
     box-shadow: 0 8px 22px rgba(94, 105, 180, 0.2);
-}
-
-/* รูปปกมหาวิทยาลัย */
-.university-image {
-    width: 100%;
-    max-width: 650px;
-    height: auto;
-    display: block;
-    margin: 0 auto 25px;
-    border-radius: 15px;
-    border: 5px solid #ffffff;
-    box-shadow: 0 8px 22px rgba(94, 105, 180, 0.2);
-}
-
-/* กล่องข้อมูล */
-.info-box {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 25px;
-    background: #f3f5ff;
-    border-radius: 20px;
-    text-align: left;
-    border-left: 5px solid #7184dc;
-}
-
-.info-box p {
-    margin-bottom: 10px;
-    line-height: 1.8;
-}
-
-/* กล่องมหาวิทยาลัย */
-.university-box {
-    max-width: 650px;
-    margin: 0 auto;
-    padding: 30px;
-    background: linear-gradient(135deg, #f1f5ff, #f8f1ff);
-    border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(100, 110, 180, 0.08);
-}
-
-.university-box p {
-    margin-bottom: 12px;
 }
 
 /* กล่องผลงาน */
 .work-box {
     max-width: 700px;
     margin: 0 auto;
-    padding: 25px;
+    padding: 30px;
     background: linear-gradient(135deg, #f1f5ff, #f8f1ff);
     border-radius: 20px;
     text-align: left;
@@ -170,7 +109,13 @@ p {
 }
 
 .work-box p {
-    margin-bottom: 10px;
+    font-size: 17px;
+    line-height: 1.9;
+    margin-bottom: 12px;
+}
+
+.work-box strong {
+    color: #6575c7;
 }
 
 .work-box ul {
@@ -183,104 +128,76 @@ p {
     margin-bottom: 5px;
 }
 
-/* ปุ่มนำทาง */
-.navigation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    padding: 22px;
-    background: #f7f8ff;
-    border-top: 1px solid #e5e8fa;
+/* ปุ่ม */
+.button-area {
+    text-align: center;
+    margin-top: 30px;
 }
 
-.nav-btn {
-    border: none;
-    padding: 12px 24px;
-    border-radius: 25px;
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 5px;
     color: #ffffff;
     background: linear-gradient(135deg, #547bdc, #8668c9);
-    font-family: "Tahoma", sans-serif;
+    text-decoration: none;
+    border-radius: 25px;
     font-size: 15px;
-    cursor: pointer;
+    font-weight: bold;
     transition: 0.3s;
 }
 
-.nav-btn:hover {
+.btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 7px 15px rgba(93, 108, 190, 0.25);
 }
 
-.nav-btn:disabled {
-    background: #c5c9df;
-    cursor: not-allowed;
-    transform: none;
-    box-shadow: none;
-}
-
-.page-number {
-    color: #7b82b0;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-/* ปุ่มกลับหน้าหลัก */
-.home-btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 12px 25px;
-    color: #6575c7;
-    background: #edf0ff;
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.home-btn:hover {
-    background: #dfe5ff;
-    transform: translateY(-3px);
-}
-
-/* รองรับมือถือ */
+/* มือถือ */
 @media (max-width: 600px) {
+
     body {
         padding: 12px;
     }
 
-    .page {
-        min-height: 650px;
-        padding: 35px 20px;
+    nav {
+        gap: 6px;
+        padding: 14px 8px;
+    }
+
+    nav a {
+        font-size: 13px;
+        padding: 8px 12px;
+    }
+
+    .content {
+        padding: 40px 20px;
     }
 
     h1 {
-        font-size: 26px;
+        font-size: 27px;
     }
 
-    h2 {
-        font-size: 24px;
+    h3 {
+        font-size: 19px;
     }
 
-    p {
-        font-size: 15px;
-        line-height: 1.9;
-    }
-
-    .introduction,
-    .info-box,
-    .university-box,
     .work-box {
         padding: 20px;
     }
 
-    .work-box ul {
+    .work-box p {
         font-size: 15px;
+        line-height: 1.8;
     }
 
-    .nav-btn {
-        padding: 10px 17px;
+    .work-box ul {
+        font-size: 15px;
+        line-height: 1.9;
+    }
+
+    .btn {
         font-size: 14px;
+        padding: 10px 18px;
     }
 }
 </style>
@@ -288,159 +205,54 @@ p {
 
 <body>
 
-<div class="portfolio">
+<div class="container">
 
     <!-- ========================= -->
-    <!-- หน้า 1 : คำนำ -->
+    <!-- เมนู -->
     <!-- ========================= -->
-    <section class="page active">
 
-        <h1>คำนำ</h1>
+    <nav>
 
-        <div class="introduction">
+        <a href="index.html">
+            หน้าหลัก
+        </a>
 
-            <p>
-                แฟ้มสะสมผลงาน (Portfolio) ฉบับนี้จัดทำขึ้นเพื่อรวบรวมประวัติส่วนตัว
-                ประวัติการศึกษา ผลงาน โครงงาน และกิจกรรมที่ข้าพเจ้าได้เข้าร่วมตลอดช่วงที่ผ่านมา
-                โดยมีจุดมุ่งหมายเพื่อแสดงให้เห็นถึงความรู้ ความสามารถ ทักษะ และประสบการณ์ที่ได้สั่งสมมา
-                รวมถึงความสนใจและความตั้งใจในการศึกษาต่อระดับอุดมศึกษา
-            </p>
+        <a href="introduction.html">
+            คำนำ
+        </a>
 
-            <p>
-                ข้าพเจ้ามีความสนใจในด้านเทคโนโลยีการเกษตรและมีความมุ่งมั่นที่จะพัฒนาตนเอง
-                ให้มีความรู้ความสามารถในสาขานี้ แฟ้มสะสมผลงานเล่มนี้จึงเป็นส่วนหนึ่ง
-                ในการนำเสนอความตั้งใจ ความรับผิดชอบ และความพยายามของข้าพเจ้า
-                ในการเตรียมความพร้อมสู่การศึกษาต่อและการประกอบอาชีพในอนาคต
-            </p>
+        <a href="about.html">
+            About Me
+        </a>
 
-        </div>
+        <a href="university.html">
+            มหาวิทยาลัย
+        </a>
 
-    </section>
+        <a href="portfolio.html">
+            ผลงาน
+        </a>
 
+        <a href="skills.html">
+            ทักษะ
+        </a>
 
-    <!-- ========================= -->
-    <!-- หน้า 2 : แนะนำตัว -->
-    <!-- ========================= -->
-    <section class="page">
+        <a href="contact.html">
+            ติดต่อ
+        </a>
 
-        <h2>แนะนำตัว</h2>
-
-        <div class="info-box">
-
-            <p>
-                <strong>ชื่อ–นามสกุล:</strong>
-                นภนต์ จึงรุ่งฤทธิ์
-            </p>
-
-            <p>
-                <strong>ชื่อภาษาอังกฤษ:</strong>
-                NAPON Chuengrungrit
-            </p>
-
-            <p>
-                <strong>วันเดือนปีเกิด:</strong>
-                2 กรกฎาคม 2551
-            </p>
-
-            <p>
-                <strong>ชื่อเล่น:</strong>
-                อ๊อฟ
-            </p>
-
-            <p>
-                <strong>อายุ:</strong>
-                18 ปี
-            </p>
-
-            <p>
-                <strong>แผนการเรียน:</strong>
-                เตรียมวิศวกรรมศาสตร์
-            </p>
-
-            <p>
-                <strong>ความสนใจ:</strong>
-                เทคโนโลยี การเกษตร
-            </p>
-
-            <p>
-                <strong>เป้าหมาย:</strong>
-                ศึกษาต่อระดับมหาวิทยาลัย และพัฒนาตนเองด้านเทคโนโลยี การเกษตร
-            </p>
-
-            <p>
-                <strong>ช่องทางการติดต่อ</strong>
-            </p>
-
-            <p>
-                📞 เบอร์โทรศัพท์ : 0882707915
-            </p>
-
-            <p>
-                📧 Gmail : naponaop.11@gmail.com
-            </p>
-
-        </div>
-
-    </section>
+    </nav>
 
 
     <!-- ========================= -->
-    <!-- หน้า 3 : มหาวิทยาลัย -->
+    <!-- ผลงาน -->
     <!-- ========================= -->
-    <section class="page">
 
-        <h2>มหาวิทยาลัยที่สนใจ</h2>
+    <main class="content">
 
-        <!-- รูปปกมหาวิทยาลัย -->
-        <img
-            src="IMG_6592.png"
-            alt="รูปปกมหาวิทยาลัยบูรพา"
-            class="university-image"
-        >
-
-        <div class="university-box">
-
-            <p>
-                <strong>มหาวิทยาลัยที่จะศึกษาต่อ:</strong>
-                มหาวิทยาลัยบูรพา
-            </p>
-
-            <p>
-                <strong>คณะที่สนใจ:</strong>
-                คณะเทคโนโลยีการเกษตร
-            </p>
-
-            <p>
-                <strong>หลักสูตร:</strong>
-                วิทยาศาสตรบัณฑิต (วท.บ.)
-            </p>
-
-            <p>
-                <strong>สาขา:</strong>
-                สาขาวิชาพัฒนาผลิตภัณฑ์อุตสาหกรรมเกษตร
-            </p>
-
-            <p>
-                <strong>เป้าหมายในชีวิต:</strong>
-                เจ้าของธุรกิจการเกษตร
-            </p>
-
-        </div>
-
-        <p style="margin-top: 25px;">
-            ข้าพเจ้ามีความตั้งใจที่จะศึกษาต่อด้านเทคโนโลยีการเกษตร
-            เพื่อนำความรู้ไปพัฒนาผลิตภัณฑ์และต่อยอดเป็นธุรกิจการเกษตรในอนาคต
-        </p>
-
-    </section>
-
-
-    <!-- ========================= -->
-    <!-- หน้า 4 : ผลงาน -->
-    <!-- ========================= -->
-    <section class="page">
-
-        <h2>ผลงานและเกียรติบัตร</h2>
+        <h1>
+            ผลงานและเกียรติบัตร
+        </h1>
 
         <img
             src="2EACAFD6-FEEB-4640-85EF-4351B5843D15.jpeg"
@@ -476,110 +288,30 @@ p {
 
         </div>
 
-    </section>
 
+        <!-- ========================= -->
+        <!-- ปุ่ม -->
+        <!-- ========================= -->
 
-    <!-- ========================= -->
-    <!-- หน้า 5 : ขอบคุณ -->
-    <!-- ========================= -->
-    <section class="page">
+        <div class="button-area">
 
-        <h1>ขอบคุณที่เข้าชม</h1>
+            <a href="index.html" class="btn">
+                🏠 กลับหน้าหลัก
+            </a>
 
-        <p>
-            ขอบคุณทุกท่านที่เข้ามาเยี่ยมชม
-            แฟ้มสะสมผลงานของผม
-        </p>
+            <a href="university.html" class="btn">
+                ← มหาวิทยาลัย
+            </a>
 
-        <p>
-            ผมจะมุ่งมั่นพัฒนาความรู้ ความสามารถ
-            และทักษะของตนเองต่อไป
-        </p>
+            <a href="skills.html" class="btn">
+                ทักษะ →
+            </a>
 
-        <p class="highlight">
-            Thank you for visiting my portfolio ✨
-        </p>
+        </div>
 
-        <a href="index.html" class="home-btn">
-            🏠 กลับหน้าหลัก
-        </a>
-
-    </section>
-
-
-    <!-- ========================= -->
-    <!-- ปุ่มเปลี่ยนหน้า -->
-    <!-- ========================= -->
-    <div class="navigation">
-
-        <button
-            class="nav-btn"
-            id="prevBtn"
-            onclick="changePage(-1)">
-            ◀ ย้อนกลับ
-        </button>
-
-        <span
-            class="page-number"
-            id="pageNumber">
-            หน้า 1 / 5
-        </span>
-
-        <button
-            class="nav-btn"
-            id="nextBtn"
-            onclick="changePage(1)">
-            หน้าถัดไป ▶
-        </button>
-
-    </div>
+    </main>
 
 </div>
-
-
-<script>
-let currentPage = 0;
-
-const pages = document.querySelectorAll(".page");
-const prevBtn = document.getElementById("prevBtn");
-const nextBtn = document.getElementById("nextBtn");
-const pageNumber = document.getElementById("pageNumber");
-
-function showPage(pageIndex) {
-
-    pages.forEach((page, index) => {
-        page.classList.toggle("active", index === pageIndex);
-    });
-
-    prevBtn.disabled = pageIndex === 0;
-    nextBtn.disabled = pageIndex === pages.length - 1;
-
-    pageNumber.textContent =
-        "หน้า " + (pageIndex + 1) + " / " + pages.length;
-
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-}
-
-function changePage(direction) {
-
-    currentPage += direction;
-
-    if (currentPage < 0) {
-        currentPage = 0;
-    }
-
-    if (currentPage >= pages.length) {
-        currentPage = pages.length - 1;
-    }
-
-    showPage(currentPage);
-}
-
-showPage(currentPage);
-</script>
 
 </body>
 </html>
