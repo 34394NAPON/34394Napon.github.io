@@ -36,7 +36,7 @@ body {
     box-shadow: 0 15px 35px rgba(86, 94, 160, 0.18);
 }
 
-/* รูปโปรไฟล์ อยู่ตรงกลาง */
+/* รูปโปรไฟล์ */
 .profile-image {
     width: 230px;
     height: 280px;
@@ -74,16 +74,24 @@ p {
     font-weight: bold;
 }
 
+/* กลุ่มปุ่ม */
+.button-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
 /* ปุ่ม */
 .btn {
     display: inline-block;
-    margin-top: 25px;
-    padding: 14px 30px;
+    padding: 12px 20px;
     color: #ffffff;
     background: linear-gradient(135deg, #547bdc, #8668c9);
     text-decoration: none;
     border-radius: 30px;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
     box-shadow: 0 8px 18px rgba(93, 108, 190, 0.25);
     transition: 0.3s;
@@ -102,6 +110,7 @@ p {
 
 /* รองรับมือถือ */
 @media (max-width: 600px) {
+
     body {
         padding: 15px;
     }
@@ -126,6 +135,11 @@ p {
     p {
         font-size: 15px;
     }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
 }
 </style>
 </head>
@@ -134,13 +148,14 @@ p {
 
 <div class="card">
 
-    <!-- รูปโปรไฟล์ตรงกลาง -->
+    <!-- รูปโปรไฟล์ -->
     <img
         src="233FDED8-F43D-4F26-B2ED-A98AFD08F0B3.jpeg"
         alt="รูปโปรไฟล์ นาย นภนต์ จึงรุ่งฤทธิ์"
         class="profile-image"
     >
 
+    <!-- หัวข้อ -->
     <h1>
         ยินดีต้อนรับสู่<br>
         โปรไฟล์ของผม
@@ -160,9 +175,32 @@ p {
         <span class="highlight">เตรียมวิศวกรรมศาสตร์</span>
     </p>
 
-    <a href="portfolio.html" class="btn">
-        📁 ดูแฟ้มสะสมผลงาน
-    </a>
+
+    <!-- ปุ่มไปแต่ละหน้า -->
+    <div class="button-group">
+
+        <a href="introduction.html" class="btn">
+            📖 คำนำ
+        </a>
+
+        <a href="about.html" class="btn">
+            👤 About Me
+        </a>
+
+        <a href="university.html" class="btn">
+            🎓 มหาวิทยาลัย
+        </a>
+
+        <a href="portfolio.html" class="btn">
+            🏆 ผลงาน
+        </a>
+
+        <a href="skills.html" class="btn">
+            🛠️ ทักษะ
+        </a>
+
+    </div>
+
 
     <div class="footer">
         Welcome to my portfolio ✨
