@@ -8,196 +8,170 @@
 
 <style>
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
 body {
-    font-family: "Tahoma", sans-serif;
-    min-height: 100vh;
-    padding: 25px;
-    color: #4b527e;
-    background: linear-gradient(135deg, #dce9ff, #eee4ff, #f7f3ff);
+    font-family:"Tahoma",sans-serif;
+    min-height:100vh;
+    padding:25px;
+    color:#4b527e;
+    background:linear-gradient(135deg,#dce9ff,#eee4ff,#f7f3ff);
 }
 
-/* กล่องหลัก */
 .container {
-    width: 100%;
-    max-width: 850px;
-    margin: 0 auto;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 28px;
-    box-shadow: 0 15px 35px rgba(86, 94, 160, 0.18);
-    overflow: hidden;
+    width:100%;
+    max-width:850px;
+    margin:0 auto;
+    background:rgba(255,255,255,0.95);
+    border-radius:28px;
+    box-shadow:0 15px 35px rgba(86,94,160,0.18);
+    overflow:hidden;
 }
 
-/* เมนู */
 nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 18px;
-    background: linear-gradient(135deg, #547bdc, #8668c9);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:10px;
+    padding:18px;
+    background:linear-gradient(135deg,#547bdc,#8668c9);
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: bold;
-    padding: 10px 17px;
-    border-radius: 20px;
-    transition: 0.3s;
+    color:white;
+    text-decoration:none;
+    font-size:15px;
+    font-weight:bold;
+    padding:10px 17px;
+    border-radius:20px;
+    transition:0.3s;
 }
 
 nav a:hover {
-    background: rgba(255,255,255,0.2);
-    transform: translateY(-2px);
+    background:rgba(255,255,255,0.2);
+    transform:translateY(-2px);
 }
 
-/* เนื้อหา */
 .content {
-    min-height: 620px;
-    padding: 55px 45px;
-    text-align: center;
+    min-height:620px;
+    padding:55px 45px;
+    text-align:center;
 }
 
 h1 {
-    color: #3e4c91;
-    font-size: 32px;
-    line-height: 1.5;
-    margin-bottom: 30px;
+    color:#3e4c91;
+    font-size:32px;
+    margin-bottom:30px;
 }
 
-h2 {
-    color: #6575c7;
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-h3 {
-    color: #6575c7;
-    font-size: 21px;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-/* รูปผลงาน */
 .certificate-image {
-    width: 100%;
-    max-width: 700px;
-    height: auto;
-    display: block;
-    margin: 0 auto 30px;
-    border-radius: 15px;
-    border: 5px solid #ffffff;
-    box-shadow: 0 8px 22px rgba(94, 105, 180, 0.2);
+    width:100%;
+    max-width:700px;
+    height:auto;
+    display:block;
+    margin:0 auto 30px;
+    border-radius:15px;
+    border:5px solid white;
+    box-shadow:0 8px 22px rgba(94,105,180,0.2);
 }
 
-/* กล่องผลงาน */
 .work-box {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 30px;
-    background: linear-gradient(135deg, #f1f5ff, #f8f1ff);
-    border-radius: 20px;
-    text-align: left;
-    box-shadow: 0 5px 15px rgba(100, 110, 180, 0.08);
+    max-width:700px;
+    margin:0 auto;
+    padding:30px;
+    background:linear-gradient(135deg,#f1f5ff,#f8f1ff);
+    border-radius:20px;
+    text-align:left;
+    box-shadow:0 5px 15px rgba(100,110,180,0.08);
+}
+
+.work-box h2 {
+    color:#6575c7;
+    font-size:21px;
+    line-height:1.6;
+    margin-bottom:15px;
 }
 
 .work-box p {
-    font-size: 17px;
-    line-height: 1.9;
-    margin-bottom: 12px;
+    font-size:17px;
+    line-height:1.9;
+    margin-bottom:12px;
 }
 
 .work-box strong {
-    color: #6575c7;
+    color:#6575c7;
 }
 
 .work-box ul {
-    padding-left: 25px;
-    line-height: 2;
-    font-size: 16px;
+    padding-left:25px;
+    line-height:2;
+    font-size:16px;
 }
 
 .work-box li {
-    margin-bottom: 5px;
+    margin-bottom:5px;
 }
 
-/* ปุ่ม */
 .button-area {
-    text-align: center;
-    margin-top: 30px;
+    text-align:center;
+    margin-top:30px;
 }
 
 .btn {
-    display: inline-block;
-    padding: 12px 25px;
-    margin: 5px;
-    color: #ffffff;
-    background: linear-gradient(135deg, #547bdc, #8668c9);
-    text-decoration: none;
-    border-radius: 25px;
-    font-size: 15px;
-    font-weight: bold;
-    transition: 0.3s;
+    display:inline-block;
+    padding:12px 25px;
+    margin:5px;
+    color:white;
+    background:linear-gradient(135deg,#547bdc,#8668c9);
+    text-decoration:none;
+    border-radius:25px;
+    font-size:15px;
+    font-weight:bold;
+    transition:0.3s;
 }
 
 .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 7px 15px rgba(93, 108, 190, 0.25);
+    transform:translateY(-3px);
 }
 
-/* มือถือ */
-@media (max-width: 600px) {
-
+@media(max-width:600px) {
     body {
-        padding: 12px;
+        padding:12px;
     }
 
     nav {
-        gap: 6px;
-        padding: 14px 8px;
+        gap:6px;
+        padding:14px 8px;
     }
 
     nav a {
-        font-size: 13px;
-        padding: 8px 12px;
+        font-size:13px;
+        padding:8px 12px;
     }
 
     .content {
-        padding: 40px 20px;
+        padding:40px 20px;
     }
 
     h1 {
-        font-size: 27px;
-    }
-
-    h3 {
-        font-size: 19px;
+        font-size:27px;
     }
 
     .work-box {
-        padding: 20px;
+        padding:20px;
     }
 
     .work-box p {
-        font-size: 15px;
-        line-height: 1.8;
+        font-size:15px;
+        line-height:1.8;
     }
 
     .work-box ul {
-        font-size: 15px;
-        line-height: 1.9;
-    }
-
-    .btn {
-        font-size: 14px;
-        padding: 10px 18px;
+        font-size:15px;
     }
 }
 </style>
@@ -207,109 +181,68 @@ h3 {
 
 <div class="container">
 
-    <!-- ========================= -->
-    <!-- เมนู -->
-    <!-- ========================= -->
+<nav>
+    <a href="index.html">หน้าหลัก</a>
+    <a href="introduction.html">คำนำ</a>
+    <a href="about.html">About Me</a>
+    <a href="university.html">มหาวิทยาลัย</a>
+    <a href="portfolio.html">ผลงาน</a>
+    <a href="skills.html">ทักษะ</a>
+</nav>
 
-    <nav>
+<main class="content">
 
-        <a href="index.html">
-            หน้าหลัก
-        </a>
+<h1>
+ผลงานและเกียรติบัตร
+</h1>
 
-        <a href="introduction.html">
-            คำนำ
-        </a>
+<img
+    src="2EACAFD6-FEEB-4640-85EF-4351B5843D15.jpeg"
+    alt="เกียรติบัตรผลงานวิทยาศาสตร์และเทคโนโลยี"
+    class="certificate-image"
+>
 
-        <a href="about.html">
-            About Me
-        </a>
+<div class="work-box">
 
-        <a href="university.html">
-            มหาวิทยาลัย
-        </a>
+<h2>
+เป็นวิทยากรจัดแสดงผลงานนิทรรศการวิทยาศาสตร์และเทคโนโลยี
+</h2>
 
-        <a href="portfolio.html">
-            ผลงาน
-        </a>
+<p>
+<strong>รายละเอียดผลงาน:</strong>
+เข้าร่วมเป็นวิทยากรจัดแสดงผลงานนิทรรศการวิทยาศาสตร์และเทคโนโลยี
+เนื่องในงานวันวิทยาศาสตร์แห่งชาติ
+</p>
 
-        <a href="skills.html">
-            ทักษะ
-        </a>
+<p>
+<strong>ทักษะที่ได้รับ</strong>
+</p>
 
-        <a href="contact.html">
-            ติดต่อ
-        </a>
+<ul>
+<li>ทักษะการสื่อสารและการนำเสนอผลงาน</li>
+<li>ทักษะการทำงานร่วมกับผู้อื่น</li>
+<li>ทักษะการถ่ายทอดความรู้ด้านวิทยาศาสตร์</li>
+<li>ทักษะการคิดวิเคราะห์และแก้ไขปัญหา</li>
+<li>ทักษะการวางแผนและการจัดเตรียมงาน</li>
+<li>ทักษะความรับผิดชอบและการตรงต่อเวลา</li>
+<li>ทักษะการใช้เทคโนโลยีในการนำเสนอ</li>
+</ul>
 
-    </nav>
+</div>
 
+<div class="button-area">
 
-    <!-- ========================= -->
-    <!-- ผลงาน -->
-    <!-- ========================= -->
+<a href="index.html" class="btn">
+🏠 กลับหน้าหลัก
+</a>
 
-    <main class="content">
+<a href="skills.html" class="btn">
+ทักษะ →
+</a>
 
-        <h1>
-            ผลงานและเกียรติบัตร
-        </h1>
+</div>
 
-        <img
-            src="2EACAFD6-FEEB-4640-85EF-4351B5843D15.jpeg"
-            alt="เกียรติบัตรผลงานวิทยาศาสตร์และเทคโนโลยี"
-            class="certificate-image"
-        >
-
-        <div class="work-box">
-
-            <h3>
-                เป็นวิทยากรจัดแสดงผลงานนิทรรศการวิทยาศาสตร์และเทคโนโลยี
-            </h3>
-
-            <p>
-                <strong>รายละเอียดผลงาน:</strong>
-                เข้าร่วมเป็นวิทยากรจัดแสดงผลงานนิทรรศการวิทยาศาสตร์และเทคโนโลยี
-                เนื่องในงานวันวิทยาศาสตร์แห่งชาติ
-            </p>
-
-            <p>
-                <strong>ทักษะที่ได้รับ</strong>
-            </p>
-
-            <ul>
-                <li>ทักษะการสื่อสารและการนำเสนอผลงาน</li>
-                <li>ทักษะการทำงานร่วมกับผู้อื่น</li>
-                <li>ทักษะการถ่ายทอดความรู้ด้านวิทยาศาสตร์</li>
-                <li>ทักษะการคิดวิเคราะห์และแก้ไขปัญหา</li>
-                <li>ทักษะการวางแผนและการจัดเตรียมงาน</li>
-                <li>ทักษะความรับผิดชอบและการตรงต่อเวลา</li>
-                <li>ทักษะการใช้เทคโนโลยีในการนำเสนอ</li>
-            </ul>
-
-        </div>
-
-
-        <!-- ========================= -->
-        <!-- ปุ่ม -->
-        <!-- ========================= -->
-
-        <div class="button-area">
-
-            <a href="index.html" class="btn">
-                🏠 กลับหน้าหลัก
-            </a>
-
-            <a href="university.html" class="btn">
-                ← มหาวิทยาลัย
-            </a>
-
-            <a href="skills.html" class="btn">
-                ทักษะ →
-            </a>
-
-        </div>
-
-    </main>
+</main>
 
 </div>
 
